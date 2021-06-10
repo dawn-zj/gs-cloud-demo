@@ -1,0 +1,7 @@
+server:
+  port: 8083
+
+# 不需要对外提供服务的不需要注册
+#spring:
+#  application:
+#    name: my-consumer
