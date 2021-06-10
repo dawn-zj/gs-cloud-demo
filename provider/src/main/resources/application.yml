@@ -2,10 +2,11 @@ server:
   port: 8082
 
 spring:
-  cloud:
-    nacos:
-      discovery:
-        # 指定nacos server地址，默认端口8848
-        server-addr: localhost:8848
+#  cloud:
+#    nacos:
+#      discovery:
+#        # 鎸囧畾nacos server鍦板潃锛屼笉鐢ㄥ啓http://锛屼笉閰嶇疆榛樿鏄湰鏈簂ocalhost:8848
+#        server-addr: localhost:8848
   application:
+    # 娉ㄥ唽鏈嶅姟鐨勫叧閿洜绱狅紝娉ㄩ噴鎺塶ame灏变笉浼氬啀娉ㄥ唽
     name: my-provider
