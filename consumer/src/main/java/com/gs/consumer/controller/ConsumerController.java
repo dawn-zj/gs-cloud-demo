@@ -26,10 +26,12 @@ public class ConsumerController {
 	@GetMapping("/consumer")
 	public String test1() {
 		// 获取提供者实例
-		List<ServiceInstance> provider = discoveryClient.getInstances("my-provider");
-		int index = ThreadLocalRandom.current().nextInt(provider.size());
+		// List<ServiceInstance> provider = discoveryClient.getInstances("my-provider");
+		// int index = ThreadLocalRandom.current().nextInt(provider.size());
 		// 调用提供者实例的index方法
-		String url = provider.get(index).getUri() + "/index";
-		return "consumer随机远程调用provier："+this.restTemplate.getForObject(url, String.class);
+		// String url = provider.get(index).getUri() + "/index";
+		// return "consumer随机远程调用provier：" + this.restTemplate.getForObject(url, String.class);
+
+		return "consumer随机远程调用provier：" + this.restTemplate.getForObject("http://my-provider/index", String.class);
 	}
 }
