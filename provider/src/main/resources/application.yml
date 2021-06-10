@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8081
 
 spring:
 #  cloud:
@@ -10,3 +10,8 @@ spring:
   application:
     # 注册服务的关键因素，注释掉name就不会再注册
     name: my-provider
+
+# 针对此服务设置负载策略
+#my-provider:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.gs.provider.config.BalanceWeightRule
