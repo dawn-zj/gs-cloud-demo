@@ -18,6 +18,7 @@
     <!--子模块-->
     <modules>
         <module>provider</module>
+        <module>consumer</module>
     </modules>
 
     <!--父项目统一管理版本号-->
@@ -38,6 +39,12 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.1.RELEASE</version>
+            </dependency>
+            <!--Alibaba Nacos服务治理-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
                 <version>2.2.1.RELEASE</version>
             </dependency>
 
