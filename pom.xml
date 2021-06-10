@@ -24,6 +24,7 @@
     <!--父项目统一管理版本号-->
     <properties>
         <java.version>1.8</java.version>
+        <nacos.version>2.2.1.RELEASE</nacos.version>
     </properties>
 
     <!--通过dependencyManagement来统一管理父子项目共用jar包的版本，让子项目中引用一个依赖而不用显式的列出版本号-->
@@ -33,12 +34,13 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-                <version>2.2.1.RELEASE</version>
+                <version>${nacos.version}</version>
             </dependency>
 
         </dependencies>
     </dependencyManagement>
 
+    <!--父项目定义依赖，子项目会继承-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -14,10 +14,6 @@
     <name>provider</name>
     <description>provider</description>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
     <dependencies>
         <!--Alibaba Nacos服务治理-->
         <dependency>
