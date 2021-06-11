@@ -8,13 +8,16 @@
         <artifactId>alibabademo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.gs.provider</groupId>
+    <groupId>com.gs</groupId>
     <artifactId>provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>provider</name>
-    <description>provider</description>
 
     <dependencies>
+        <!--web模块-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <!--Alibaba Nacos服务治理-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
