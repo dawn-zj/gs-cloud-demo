@@ -19,22 +19,37 @@
     <modules>
         <module>provider</module>
         <module>consumer</module>
+        <module>gateway</module>
     </modules>
 
     <!--父项目统一管理版本号-->
     <properties>
         <java.version>1.8</java.version>
+        <web.version>2.3.0.RELEASE</web.version>
         <nacos.version>2.2.1.RELEASE</nacos.version>
+        <gateway.version>2.2.1.RELEASE</gateway.version>
     </properties>
 
     <!--通过dependencyManagement来统一管理父子项目共用jar包的版本，让子项目中引用一个依赖而不用显式的列出版本号-->
     <dependencyManagement>
         <dependencies>
+            <!-- spring cloud gateway 依赖 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>${gateway.version}</version>
+            </dependency>
             <!--Alibaba Nacos服务治理-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
                 <version>${nacos.version}</version>
+            </dependency>
+            <!--web模块-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${web.version}</version>
             </dependency>
 
         </dependencies>
@@ -42,10 +57,6 @@
 
     <!--父项目定义依赖，子项目会继承-->
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
     </dependencies>
 
